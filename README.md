@@ -17,6 +17,7 @@
 - Ganache
 - OpenZeppelin
 - Infura
+- Testing: Jest/Enzyme
 
 **UX:**
 - Amazon marketplace / Fiverr ecosystem of contracts of people looking to hire work
@@ -28,3 +29,40 @@
 - Work commences
 - Work is delivered (if there are delays, then it eats up at final milestone; if you complete it sooner, bonus(?))
 - Review system for contract owner and dev
+
+**Action Items:**
+- UI/UX designs and walkthrough of app (Figma) - B
+- Front-End (React) - B
+- API/Data Layer (GraphQL) - B/S
+- Back-End (NodeJS) - S
+- Blockchain (Solidity) - S
+- Testing Prototype - B/S
+- Final Presentation with slides(?) - B/S
+
+
+**Timeline:***
+- ✅ Team formed!
+- Register project on Hacker Dashboard: https://hack.ethglobal.co/ethonline2021 - B
+- ? Project Check-Ins (see: https://ethglobal.notion.site/a919c10f61284d89992bfb8837c60a4d#80f2de6681824accba8ec2be2e4d7746 + Dashboard: https://hack.ethglobal.co/ethonline2021)
+
+- 09.28 - Team kickoff + map out roadmap
+- 09.30 - Figma mocks
+- 10.3 - Front-End mapped out
+-   Authenticate (log-in/log-out) - username/password OR wallet(?): Supabase: https://supabase.io/ (PostgreSQL + MetaMask) or AWS: Amplify Framework: https://aws.amazon.com/amplify/ (DynamoDB + Cognito)
+-   Create contract
+-   Bid on contract
+-   Counter-bid on contract
+-   Start work w/ milestones?
+-   Accept NDA/contract/terms (check-box)
+-   Deliver work (success)
+- 10.5 - Back-End added to app (server)
+-   Where is data saved?
+-   What are we storing on localhost vs. the blockchain
+-   What APIs are needed to do this?
+-   Dual structure of database + ethereum
+- 10.7 - Blockchain component added to backend
+- 10.10 - Submit ✅
+
+- 10.09 - Sign up to be judged: https://ethglobal.notion.site/a919c10f61284d89992bfb8837c60a4d#2ef75a2bcacc4b21b42754006aa18c67 + Dashboard: https://hack.ethglobal.co/ethonline2021)
+- 10.10 - Project due: Sunday, October 10th at 3pm EDT / 12pm PDT / 9pm CET
+

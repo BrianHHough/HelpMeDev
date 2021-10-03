@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from '../ButtonElements';
 import { InfoContainer, InfoWrapper, InfoRow, Column1, Column2, TextWrapper, TopLine, Heading, Subtitle, BtnWrap, Img, ImgWrap } from './InfoSectionElements';
-import styled from "styled-components";
+// import styled from "styled-components";
 
 
 const InfoSection = ({lightBackground, id, imgStart, topLine, lightText, headline, darkText, description, buttonLabel, img, alt}) => {

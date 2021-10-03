@@ -2,22 +2,25 @@ import React from 'react'
 import './App.css';
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom'
 import Home from './pages';
-import SignInPage from './pages';
+import SignInPage from './pages/signin';
 
 function App() {
   return (
-    <>
+    <React.Fragment>
     <Router>
-      <Switch>
+
       <Route exact path="/">
-        <Home /> 
+      <Home /> 
       </Route>
-        <Route exact path="/signin">
+      <Switch>
+      <Route exact path="/signin">
           <SignInPage />
         </Route>
-      </Switch>
+        </Switch>
     </Router>
-    </>
+     
+  
+    </React.Fragment>
   );
 }
 

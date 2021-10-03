@@ -112,13 +112,15 @@ export const HeroBtnWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-weight: 600;
+    color: white;
 `
 export const ArrowForward = styled(ArrowForwardIcon)`
     margin-left: 8px;
-    font-size: 20px;
+    font-size: 25px;
 `
 
 export const ArrowRight = styled(ArrowForwardIosIcon)`
 margin-left: 8px;
-font-size: 20px;
+font-size: 25px;
 `

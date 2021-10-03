@@ -24,9 +24,10 @@ const HeroSection = () => {
                     allowFullScreen
                     allowfullscreen='true'
                     playsInLine
+                    controls={false}
                     >
 
-                    </VideoBackground>
+                </VideoBackground>
             </HeroBackground>
             <HeroContent>
                 <HeroH1>What Would You Pay,</HeroH1>

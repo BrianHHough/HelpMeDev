@@ -1,11 +1,15 @@
 import React from 'react'
-import ScrollToTop
+// import ScrollToTop
+import '../App.css'
 
 const SignInPage = () => {
     return (
         <>
-        <ScrollToTop />
-        <SignIn />
+        {/* <ScrollToTop /> */}
+        {/* <SignIn /> */}
+        <div>
+            <h1>Sign Up Here</h1>
+        </div>
         </>
     )
 }

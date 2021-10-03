@@ -24,7 +24,7 @@ const NavBar = ({ toggle }) => {
                     <NavBarContainer>
 
                         <NavLogo to='/' className="NavLogoGradient">
-                            <h3>HelpMeDev</h3>
+                            <h2>HelpMeDev</h2>
                         </NavLogo>
 
                         <MobileIcon 

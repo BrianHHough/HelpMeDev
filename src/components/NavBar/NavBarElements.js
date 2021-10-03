@@ -58,6 +58,7 @@ export const NavLogo = styled(LinkRouter)`
     margin-left: 24px;
     font-weight: bold;
     text-decoration: none;
+    z-index: 11;
 `
 
 export const MobileIcon = styled.div`

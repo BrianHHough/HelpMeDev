@@ -26,6 +26,18 @@
   -moz-text-fill-color: transparent;
 }
 
+/* Remove mobile blue select background */
+input,
+textarea,
+button,
+select,
+img,
+svg,
+a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+
 /* 
 **ROBOTO Font:**
 

@@ -15,7 +15,18 @@ const HeroSection = () => {
     return (
         <HeroContainer id="home">
             <HeroBackground>
-                <VideoBackground autoPlay loop muted src={Video} type='video/mp4'></VideoBackground>
+                <VideoBackground 
+                    autoPlay 
+                    loop 
+                    muted 
+                    src={Video} 
+                    type='video/mp4'
+                    allowFullScreen
+                    allowfullscreen='true'
+                    playsInLine
+                    >
+
+                    </VideoBackground>
             </HeroBackground>
             <HeroContent>
                 <HeroH1>What Would You Pay,</HeroH1>

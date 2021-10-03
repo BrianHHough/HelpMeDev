@@ -2,6 +2,8 @@
 
 2021 ETHGlobal Hackathon Project
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/eb5cfff9-d7ff-464a-885d-8390eef451c4/deploy-status)](https://helpmedev.netlify.app)
+
 **Short Description (280 characters:** Think of all the side projects you have worked on and maybe put it to the side or never finished because of a technical snag or a frustrating bug. HelpMeDev is a global & decentralized ecosystem where developers can help developers finish their side projects and side hustles.
 
 **Long Description:** Think of all the side projects you have worked on and maybe put it to the side or never finished because of a technical snag or a frustrating bug. What if you could put out contracts to an ecosystem of other developers to help you finish your project or feature for you. HelpMeDev is a gitcoin for personal projects (i.e. creating contracts so you can pay developers to help you finish your side project, startup, dream app, etc.)

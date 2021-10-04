@@ -2767,7 +2767,7 @@
     "js-sha3" "0.8.0"
     "query-string" "6.13.5"
 
-"@walletconnect/web3-provider@^1.6.1", "@walletconnect/web3-provider@^1.6.5":
+"@walletconnect/web3-provider@^1.6.1":
   "integrity" "sha512-SeC7+1saHxvFn2wjt/3F0sTkDemHDNDbMkdZ3jtA7vjEw91Q0CmaYIuZk2UxyVM+tC1jL1l4yci/sgaFeAcXpQ=="
   "resolved" "https://registry.npmjs.org/@walletconnect/web3-provider/-/web3-provider-1.6.5.tgz"
   "version" "1.6.5"

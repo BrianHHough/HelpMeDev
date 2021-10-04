@@ -12,7 +12,6 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "@typeform/embed-react": "^1.1.2",
-    "@walletconnect/web3-provider": "^1.6.5",
     "moralis": "^0.0.68",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

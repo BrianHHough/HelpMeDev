@@ -137,3 +137,52 @@ To:
     },
 
 ```
+
+### Attempt to fix - part 2:
+
+- ensure @walletconnect/web3-provider is installed: `npm i @walletconnect/web3-provider`
+- delete /build, /node_modules, and `package-lock.json`
+- go into `yarn.lock` and search for `ssh://` -- you should see something like this:
+
+THE BAD VERSION:
+
+```yaml
+"ethereumjs-abi@git+https://github.com/ethereumjs/ethereumjs-abi.git":
+  "resolved" "git+ssh://git@github.com/ethereumjs/ethereumjs-abi.git#ee3994657fa7a427238e6ba92a84d0b529bbcde0"
+  "version" "0.6.8"
+  dependencies:
+    "bn.js" "^4.11.8"
+    "ethereumjs-util" "^6.0.0"
+```
+
+- we need to change 2 things: the "resolved" prameter and the package name:
+  - "ethereumjs-abi-0.6.8"
+  - "resolved": "https://registry.npmjs.org/ethereumjs-abi/-/ethereumjs-abi-0.6.8.tgz"
+
+THE GOOD VERSION:
+
+```yaml
+"ethereumjs-abi-0.6.8":
+  "resolved": "https://registry.npmjs.org/ethereumjs-abi/-/ethereumjs-abi-0.6.8.tgz"
+  "version" "0.6.8"
+  dependencies:
+    "bn.js" "^4.11.8"
+    "ethereumjs-util" "^6.0.0"
+```
+
+- install the node_modules again with `yarn install`
+
+This may change the yarn.lock file package to this, but that's ok:
+
+```yaml
+"ethereumjs-abi@git+https://github.com/ethereumjs/ethereumjs-abi.git":
+  version "0.6.8"
+  resolved "git+https://github.com/ethereumjs/ethereumjs-abi.git#ee3994657fa7a427238e6ba92a84d0b529bbcde0"
+  dependencies:
+    bn.js "^4.11.8"
+    ethereumjs-util "^6.0.0"
+```
+
+Confirm that there are no instances of `ssh://` in the yarn.lock file.
+
+- confirm that `yarn build` will build the project with no errors (this will take a while)

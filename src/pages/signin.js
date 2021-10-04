@@ -1,15 +1,15 @@
 import React from 'react'
-// import ScrollToTop
+import NavBarSignIn from '../components/NavBar/indexSignIn'
 import '../App.css'
+import SignIn from '../components/SignIn'
+import ScrollToTop from '../components/ScrollToTop'
 
 const SignInPage = () => {
     return (
         <>
-        {/* <ScrollToTop /> */}
-        {/* <SignIn /> */}
-        <div>
-            <h1>Sign Up Here</h1>
-        </div>
+        <ScrollToTop />
+        <NavBarSignIn />
+           <SignIn />
         </>
     )
 }

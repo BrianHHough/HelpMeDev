@@ -7,7 +7,7 @@ export const InfoContainer = styled.div`
     @media screen and (max-width: 768px) {
         padding: 100px 0;
     }
-`
+`;
 
 export const InfoWrapper = styled.div`
     display: grid;
@@ -19,36 +19,37 @@ export const InfoWrapper = styled.div`
     margin-left: auto;
     padding: 0 24px;
     justify-content: center;
-`
+`;
 
 export const InfoRow = styled.div`
     display: grid;
-    grid-auto-column: minmax(auto, 1fr);
+    grid-auto-columns: minmax(auto, 1fr);
     align-items: center;
-    grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'`)};
+    grid-template-areas: ${({ imgStart }) => imgStart ? `'col2 col1'` : `'col1 col2'`};
 
     @media screen and (max-width: 768px) {
-        grid-template-areas: ${({imgStart}) => (imgStart ? `'col 1' 'col2'` : `'col1 col1' 'col2 col2'`)}
+        /* If imgStart true...make col1 the image */
+        grid-template-areas: ${({ imgStart }) => imgStart ? `'col1 col1' 'col2 col2'` : `'col1 col1' 'col2 col2'`}
     }
-`
+`;
 
 export const Column1 = styled.div`
     margin-bottom: 15px;
     padding: 0 15px;
     grid-area: col1;
-`
+`;
 
 export const Column2 = styled.div`
     margin-bottom: 15px;
     padding: 0 15px;
     grid-area: col2;
-`
+`;
 
 export const TextWrapper = styled.div`
     max-width: 540px;
     padding-top: 0;
     padding-bottom: 60px;
-`
+`;
 
 export const TopLine = styled.p`
     color: #43A1FF;
@@ -58,7 +59,7 @@ export const TopLine = styled.p`
     letter-spacing: 1.4px;
     text-transform: uppercase;
     margin-bottom: 16px;
-`
+`;
 
 export const Heading = styled.h1`
     margin-bottom: 24px;
@@ -70,7 +71,7 @@ export const Heading = styled.h1`
     @media screen and (max-width: 480px) {
         font-size: 32px
     }
-`
+`;
 
 export const Subtitle = styled.p`
     max-width: 440px;
@@ -83,16 +84,16 @@ export const Subtitle = styled.p`
 export const BtnWrap = styled.div`
     display: flex;
     justify-conent: flex-start;
-`
+`;
 
 export const ImgWrap = styled.div`
     max-width: 555px;
     height: 100%;
-`
+`;
 
 export const Img = styled.img`
     width: 100%;
     margin: 0 0 10px 0;
     padding-right: 0px;
-`
+`;
 

@@ -3,14 +3,20 @@ import '../../App.css'
 import Video from '../../assets/developer-coding-video/Developer Codes.mp4';
 import { HeroContainer, HeroBackground,VideoBackground, HeroContent, HeroH1, HeroH1Gradient, HeroP, HeroBtnWrapper, ArrowForward, ArrowRight, HeroDisclaimer} from './HeroElements';
 import { Button } from '../ButtonElements';
+import { useHistory } from "react-router-dom"
 
 const HeroSection = () => {
     const [hover, setHover] = useState(false);
+    const history = useHistory();
 
     const onHover = () => {
         setHover(!hover)
-
     }
+
+    const handleRouteSignUpForm = () => {
+        history.push("/signupform")
+    }
+
 
     return (
         <HeroContainer id="home">
@@ -36,13 +42,14 @@ const HeroSection = () => {
                 <HeroDisclaimer>*While supplies lasts (see elgibility)</HeroDisclaimer>
                 <HeroBtnWrapper>
                     <Button 
-                    to="signup" 
+                    to="signupform" 
                     onMouseEnter={onHover}
                     onMouseLeave={onHover}
                     primary="true"
                     dark="true"
+                    onClick={handleRouteSignUpForm}
                     >
-                        Get Started {hover ? <ArrowForward /> : <ArrowRight />}
+                        Join the Waitlist {hover ? <ArrowForward /> : <ArrowRight />}
                     </Button>
                 </HeroBtnWrapper>
             </HeroContent>

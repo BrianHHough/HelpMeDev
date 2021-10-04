@@ -3,7 +3,7 @@ import { Link as LinkRouter } from 'react-router-dom'
 import { Link as LinkScroll } from 'react-scroll'
 
 export const Nav = styled.nav`
-    background: ${({scrollNav}) => (scrollNav ? '#1C3691' : '#1C3691')};
+    background: #1C3691;
     height: 13vh;
     display: flex;
     justify-content: center;
@@ -99,7 +99,7 @@ export const NavItem = styled.li`
     height: 80px;
 `
 
-export const NavLinks = styled(LinkScroll)`
+export const NavLinks = styled(LinkRouter)`
     color: #fff;
     display: flex;
     align-items: center;
@@ -110,7 +110,6 @@ export const NavLinks = styled(LinkScroll)`
 
     &:active {
         border-bottom: 3px solid #00F260;
-        font-weight: 600;
     }
 `
 

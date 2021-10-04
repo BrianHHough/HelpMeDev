@@ -17,7 +17,8 @@
 
 - Front-End: React
 - API layer: GraphQL
-- Blockchain: Solidity (ETH)
+- Authentication: [MetaMask](./docs/Metamask.md) <> [Moralis](./docs/Moralis.md)
+- Blockchain: SKALE <> Ethereum (Solidity)
 - Back-End: NodeJS
 
 **Tools:**

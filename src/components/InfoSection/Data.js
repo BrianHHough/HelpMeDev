@@ -1,6 +1,6 @@
 export const homeObjectOne = {
     id: 'about',
-    lightBackground: true,
+    lightBackground: false,
     lightText: true,
     lightTextDes: true,
     topLine: 'Developer Marketplace',
@@ -34,7 +34,7 @@ export const homeObjectTwo = {
 
 export const homeObjectThree = {
     id: 'about',
-    lightBackground: true,
+    lightBackground: false,
     lightText: true,
     lightTextDes: true,
     topLine: 'Scaling Global Entrepreneurship',
@@ -43,6 +43,23 @@ export const homeObjectThree = {
     buttonLabel: 'Get started',
     imgStart: false,
     img: require('../../assets/images/svg-3.svg').default,
+    alt: 'collaboration',
+    dark: true,
+    primary: true,
+    darkText: false,
+}
+
+export const homeObjectFour = {
+    id: 'start',
+    lightBackground: false,
+    lightText: true,
+    lightTextDes: true,
+    topLine: 'Join HelpMeDev Today',
+    headline: 'Create an Account Fast and Receive Instant Value',
+    description: 'Through tbe power of decentralization, community, and innovation, HelpMeDev will change how we work on projects and launch the companies of tomorrow, today.',
+    buttonLabel: 'Sign Up Today',
+    imgStart: false,
+    img: require('../../assets/images/svg-4.svg').default,
     alt: 'collaboration',
     dark: true,
     primary: true,

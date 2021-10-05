@@ -38,7 +38,7 @@ const NavBar = ({ toggle }) => {
     const toggleHome = () => {
         scroll.scrollToTop();
     }
-    if (!isAuthenticated) {
+    
     return (
         <div>
             <>
@@ -90,7 +90,7 @@ const NavBar = ({ toggle }) => {
                                 spy={true} 
                                 exact='true' 
                                 offset={-80}
-                                >Member Perks</NavLinks>
+                                >Listings</NavLinks>
                             </NavItem>
                             <NavItem>
                                 <NavLinks 
@@ -105,8 +105,11 @@ const NavBar = ({ toggle }) => {
                         </NavMenu>
 
                         <NavBtn>
-                            <NavBtnLink to="/signin">
-                            Log In
+                            <NavBtnLink 
+                            onClick={() => logout()}
+                            disabled={isAuthenticating}
+                            >
+                            Log Out
                             </NavBtnLink>
                         </NavBtn> 
 
@@ -116,7 +119,7 @@ const NavBar = ({ toggle }) => {
             </>
         </div>
     )
-    }
+
 }
 
 export default NavBar

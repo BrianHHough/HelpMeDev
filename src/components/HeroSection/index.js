@@ -11,8 +11,10 @@ const HeroSection = () => {
     const [hover, setHover] = useState(false);
     const [hover2, setHover2] = useState(false);
     const history = useHistory();
-    const { authenticate, isAuthenticated, user } = useMoralis();
-    const { logout, isAuthenticating } = useMoralis();
+    // const { authenticate, isAuthenticated, user } = useMoralis();
+    const { authenticate } = useMoralis();
+    // const { logout, isAuthenticating } = useMoralis();
+    const { isAuthenticating } = useMoralis();
 
     const onHover = () => {
         setHover(!hover)

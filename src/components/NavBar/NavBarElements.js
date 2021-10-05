@@ -4,7 +4,8 @@ import { Link as LinkScroll } from 'react-scroll'
 
 export const Nav = styled.nav`
     background: ${({scrollNav}) => (scrollNav ? '#1C3691' : '#1C3691')};
-    height: 13vh;
+    /* height: 13vh; */
+    height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,7 +37,7 @@ export const Nav = styled.nav`
         position: fixed;
         width: 100%;
     }
-`
+`;
 
 export const NavBarContainer = styled.div`
     display: flex;
@@ -46,7 +47,7 @@ export const NavBarContainer = styled.div`
     width: 100%;
     padding: 0 24px;
     max-width: 1100px;
-`
+`;
 
 export const NavLogo = styled(LinkRouter)`
     color: #fff;
@@ -66,22 +67,24 @@ export const NavLogo = styled(LinkRouter)`
     @media screen and (max-width: 480px) {
         font-size: 1.5rem;
     }
-`
+`;
 
 export const MobileIcon = styled.div`
     display: none;
    
     @media screen and (max-width: 768px) {
         display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
+        position: relative;
+        justify-self: flex-start;
+        align-items: center;
+        margin-top: -70px;
+        margin-right: 0px;
         transform: translate(-100%, 60%);
         font-size: 2rem;
         cursor: pointer;
         color: white;
     }
-`
+`;
 
 export const NavMenu = styled.ul`
     display: flex;
@@ -93,11 +96,11 @@ export const NavMenu = styled.ul`
     @media screen and (max-width: 768px) {
         display: none;
     }
-`
+`;
 
 export const NavItem = styled.li`
     height: 80px;
-`
+`;
 
 export const NavLinks = styled(LinkScroll)`
     color: #fff;
@@ -108,11 +111,11 @@ export const NavLinks = styled(LinkScroll)`
     height: 100%;
     cursor: pointer;
 
-    &:active {
+    &.active {
         border-bottom: 3px solid #00F260;
         font-weight: 600;
     }
-`
+`;
 
 export const NavBtn = styled.nav`
     display: flex;
@@ -121,7 +124,7 @@ export const NavBtn = styled.nav`
     @media screen and (max-width: 768px) {
         display: none;
     }
-`
+`;
 
 export const NavBtnLink = styled(LinkRouter)`
     border-radius: 50px;
@@ -172,4 +175,4 @@ export const NavBtnLink = styled(LinkRouter)`
         }
     }
 
-`
+`;

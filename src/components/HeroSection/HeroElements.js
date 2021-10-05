@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import MarkEmailReadIcon from '@mui/icons-material/MarkEmailRead';
 
 export const HeroContainer = styled.div`
     background: #0c0c0c;
@@ -123,4 +124,9 @@ export const ArrowForward = styled(ArrowForwardIcon)`
 export const ArrowRight = styled(ArrowForwardIosIcon)`
 margin-left: 8px;
 font-size: 25px;
+`
+
+export const EmailButton = styled(MarkEmailReadIcon)`
+margin-left: 8px;
+font-size: 45px;
 `

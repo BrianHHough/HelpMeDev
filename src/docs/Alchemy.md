@@ -1,0 +1,9 @@
+# Skale
+
+## What we used it for:
+
+- You can build a complete dapp using Alchemy.
+
+## Steps to integrate:
+
+- This is probably a good starting point for you explaining why and how to use Alchemy: https://docs.alchemy.com/alchemy/introduction/why-use-alchemy

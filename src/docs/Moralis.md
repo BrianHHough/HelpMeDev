@@ -65,7 +65,7 @@ https://docs.moralis.io/moralis-server/cloud-code/cloud-functions
 
 ## Deployment
 
-### Major Bug with deploying with Moralis to Netlify (build script fails)
+### Major Bug with deploying with Moralis to Netlify (build script fails because the `ethereumjs-abi` package is set of the wrong repository link - ssh instead of https)
 
 - You get this because the way in which you used to get into `ethereumjs-abi` is deprecated and no longer works via ssh://.
 
@@ -155,7 +155,7 @@ THE BAD VERSION:
     "ethereumjs-util" "^6.0.0"
 ```
 
-- we need to change 2 things: the "resolved" prameter and the package name:
+- we need to change 2 things: the "resolved" prameter and the package name (source: [GitHub Issue](https://github.com/ethereumjs/ethereumjs-abi/issues/67)):
   - "ethereumjs-abi-0.6.8"
   - "resolved": "https://registry.npmjs.org/ethereumjs-abi/-/ethereumjs-abi-0.6.8.tgz"
 

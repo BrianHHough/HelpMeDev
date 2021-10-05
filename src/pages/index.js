@@ -10,7 +10,7 @@ import Services from '../components/Services'
 import Listings from '../components/Listings'
 import SideBar from '../components/SideBar'
 
-import { useHistory } from "react-router-dom"
+// import { useHistory } from "react-router-dom"
 import { useMoralis } from "react-moralis";
 
 const Home = () => {
@@ -20,7 +20,8 @@ const Home = () => {
         setIsOpen(!isOpen);
     };
 
-    const { authenticate, isAuthenticated, user } = useMoralis();
+    // const { authenticate, isAuthenticated, user } = useMoralis();
+    const { isAuthenticated, user } = useMoralis();
     const { logout, isAuthenticating } = useMoralis();
 
     if (!isAuthenticated) {

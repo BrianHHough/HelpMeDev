@@ -5,17 +5,19 @@ import { useHistory } from "react-router-dom"
 import { useMoralis } from "react-moralis";
 
 const SignIn = () => {
-    const { authenticate, isAuthenticated, user } = useMoralis();
-    const { logout, isAuthenticating } = useMoralis();
+    // const { authenticate, isAuthenticated, user } = useMoralis();
+    // const { logout, isAuthenticating } = useMoralis();
+    const { authenticate, isAuthenticated } = useMoralis();
+    const { isAuthenticating } = useMoralis();
     const history = useHistory();
 
-    const handleRouteHomePage = async() => {
-        if (!isAuthenticated) {
-            return (
-        history.push("/")
-        )
-        }
-    }
+    // const handleRouteHomePage = async() => {
+    //     if (!isAuthenticated) {
+    //         return (
+    //     history.push("/")
+    //     )
+    //     }
+    // }
 
     if (!isAuthenticated) {
     return (

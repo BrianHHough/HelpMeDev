@@ -19,9 +19,10 @@ const useStyles = makeStyles((theme) => ({
 const NavBar = ({ toggle }) => {
     const classes = useStyles();
     const [scrollNav, setScrollNav] = useState(false);
-
-    const { authenticate, isAuthenticated, user } = useMoralis();
-    const { logout, isAuthenticating } = useMoralis();
+    // const { authenticate, isAuthenticated, user } = useMoralis();
+    // const { isAuthenticated, user } = useMoralis();
+    const { isAuthenticated } = useMoralis();
+    // const { logout, isAuthenticating } = useMoralis();
 
     const changeNav = () => {
         if(window.scrollY >= 80) {

@@ -3,7 +3,7 @@ import React from 'react';
 import Icon1 from '../../assets/images/svg-1.svg';
 import Icon2 from '../../assets/images/svg-2.svg';
 import Icon3 from '../../assets/images/svg-3.svg';
-import { ListingsSearchContainer, ServicesContainer, ServicesH1, ServicesWrapper, ServicesCard, ServicesIcon, ServicesH2, ServicesP } from './ListingsElements'
+import { ListingsSearchContainer, ServicesContainer, ServicesWrapper, ServicesCard, ServicesIcon, ServicesH2, ServicesP } from './ListingsElements'
 
 import Paper from '@material-ui/core/Paper';
 import IconButton from '@material-ui/core/IconButton';

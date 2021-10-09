@@ -25,9 +25,9 @@ const HeroSection = () => {
         setHover2(!hover2)
     }
 
-    const handleRouteSignUpForm = () => {
-        history.push("/signupform")
-    }
+    // const handleRouteSignUpForm = () => {
+    //     history.push("/signupform")
+    // }
 
     const handleRouteGetStarted = () => {
         history.push("/signup")

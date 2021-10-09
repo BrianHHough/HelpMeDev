@@ -1,7 +1,8 @@
 import React from 'react'
 
 import {Container, FormWrap, Icon, FormContent, Form, FormH1, FormH1v2, FormLabel, FormInput, FormButton, FormButtonMetaMask, Text, HeroH1Gradient} from './SignUpElements'
-import { useHistory, Redirect, useLocation } from "react-router-dom"
+// import { useHistory } from "react-router-dom"
+import { Redirect, useLocation } from "react-router-dom"
 import { useMoralis } from "react-moralis";
 
 const SignUp = () => {
@@ -9,7 +10,7 @@ const SignUp = () => {
     // const { logout, isAuthenticating } = useMoralis();
     const { authenticate, isAuthenticated } = useMoralis();
     const { isAuthenticating } = useMoralis();
-    const history = useHistory();
+    // const history = useHistory();
     const {location} = useLocation();
 
     // const handleRouteHomePage = async() => {

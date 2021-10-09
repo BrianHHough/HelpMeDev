@@ -1,5 +1,5 @@
 import React from 'react'
-import { useHistory, Redirect, useLocation } from "react-router-dom"
+import { Redirect, useLocation } from "react-router-dom"
 
 
 import { ProfileContainer, ProfileBackground, ProfileInnerCon, NavBtn, NavBtnLinkSignOut, HeroH1, HeroH1Gradient } from './ProfileElements';
@@ -12,7 +12,7 @@ import { useMoralis } from "react-moralis";
 const ProfileSection = () => {
     // const { authenticate, isAuthenticated } = useMoralis();
     const { logout, isAuthenticating } = useMoralis();
-    const { authenticate, isAuthenticated, user } = useMoralis();
+    const { isAuthenticated, user } = useMoralis();
 
     const {location} = useLocation();
 

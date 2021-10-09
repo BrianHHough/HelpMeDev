@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
-    min-height: 692px;
+    min-height: 100vh;
     height: 100%;
     position: fixed;
     bottom: 0;
@@ -10,9 +10,13 @@ export const Container = styled.div`
     right: 0;
     top: 0;
     z-index: 0;
-    overflow: none;
+    overflow-y: scroll;
     background: linear-gradient(90deg,#00F260,#43A1FF);
     
+    @media screen and (max-width: 480px) {
+        margin-left: 16px;
+        top: 80px;
+    }
 `;
 
 export const FormWrap = styled.div`

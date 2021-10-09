@@ -30,9 +30,9 @@ const Home = () => {
 
     // const { authenticate, isAuthenticated, user } = useMoralis();
     // const { authenticate } = useMoralis();
-    const { isAuthenticated, user } = useMoralis();
-    //     const { auth, authError, logout, isAuthenticating } = useMoralis();
-    const { authError, logout, isAuthenticating } = useMoralis();
+    const { isAuthenticated } = useMoralis();
+    // const { auth, authError, logout, isAuthenticating } = useMoralis();
+    const { authError } = useMoralis();
 
     if (!isAuthenticated) {
     return (

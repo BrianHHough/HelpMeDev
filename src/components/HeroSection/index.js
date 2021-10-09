@@ -7,6 +7,7 @@ import { useHistory } from "react-router-dom"
 import { useMoralis } from "react-moralis";
 import MetaMaskImg from "../../assets/images/metamaskimgfilter.png";
 
+
 const HeroSection = () => {
     const [hover, setHover] = useState(false);
     const [hover2, setHover2] = useState(false);
@@ -30,7 +31,10 @@ const HeroSection = () => {
 
 
     return (
+        <>
         <HeroContainer id="home">
+            
+            
             <HeroBackground>
                 <VideoBackground 
                     autoPlay 
@@ -91,6 +95,7 @@ const HeroSection = () => {
                 </HeroBtnWrapper>
             </HeroContent>
         </HeroContainer>
+        </>
     )
 }
 

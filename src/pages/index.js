@@ -70,12 +70,12 @@ const Home = () => {
         <NavBar toggle={toggle} />
           {/* <NavBarLoggedIn toggle={toggle}/> */}
           <Listings />
-          <h1>Welcome {user.get("username")}</h1>
-          <button 
+          {/* <h1>Welcome {user.get("username")}</h1> */}
+          {/* <button 
             type='submit'
             onClick={() => logout()}
             disabled={isAuthenticating}
-            >Sign Out</button>
+            >Sign Out</button> */}
         <Footer />
         </>
         )   

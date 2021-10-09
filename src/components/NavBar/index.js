@@ -148,6 +148,16 @@ const NavBar = ({ toggle }) => {
 
                         <NavMenu>
                             <NavItem>
+                                <NavLinksLoggedIn 
+                                to="/"
+                                smooth={true}
+                                duration={500}
+                                spy={true} 
+                                exact='true' 
+                                offset={-80}
+                                >Listings</NavLinksLoggedIn>
+                            </NavItem>
+                            {/* <NavItem>
                                 <NavLinks 
                                     to="about"
                                     smooth={true} 
@@ -157,10 +167,10 @@ const NavBar = ({ toggle }) => {
                                     offset={-80}
                                     >   
                                     Listings</NavLinks>
-                            </NavItem>
+                            </NavItem> */}
                             <NavItem>
                                 <NavLinks 
-                                to="listings"
+                                to="/help"
                                 smooth={true} 
                                 duration={500} 
                                 spy={true} 
@@ -168,19 +178,11 @@ const NavBar = ({ toggle }) => {
                                 offset={-80}
                                 >Request Help</NavLinks>
                             </NavItem>
-                            <NavItem>
-                                <NavLinks 
-                                to="perks"
-                                smooth={true} 
-                                duration={500} 
-                                spy={true} 
-                                exact='true' 
-                                offset={-80}
-                                >Member Perks</NavLinks>
-                            </NavItem>
+                            
                             <NavItem>
                                 <NavLinksLoggedIn 
                                 to="/signupform"
+                                activeClassName="active"
                                 smooth={true} 
                                 duration={500} 
                                 spy={true} 

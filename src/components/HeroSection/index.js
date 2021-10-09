@@ -29,6 +29,10 @@ const HeroSection = () => {
         history.push("/signupform")
     }
 
+    const handleRouteGetStarted = () => {
+        history.push("/signup")
+    }
+
 
     return (
         <>
@@ -57,19 +61,19 @@ const HeroSection = () => {
                 <HeroDisclaimer>*While supplies lasts (see elgibility)</HeroDisclaimer>
                 <HeroBtnWrapper>
                     <Button 
-                    to="signupform" 
+                    to="getstarted" 
                     onMouseEnter={onHover}
                     onMouseLeave={onHover}
                     primary="true"
                     dark="true"
-                    onClick={handleRouteSignUpForm}
+                    onClick={handleRouteGetStarted}
                     >
                     <EmailButton 
                     width="50px"
                     
                     />
                     &nbsp;
-                        Sign in with Email {hover ? <ArrowForward /> : <ArrowRight />}
+                        Sign Up Here {hover ? <ArrowForward /> : <ArrowRight />}
                     </Button>
                 </HeroBtnWrapper>
                 

@@ -5,7 +5,7 @@ import HeroSection from '../components/HeroSection'
 import InfoSection from '../components/InfoSection'
 import { homeObjectOne, homeObjectTwo, homeObjectThree, homeObjectFour } from '../components/InfoSection/Data'
 import NavBar from '../components/NavBar'
-import NavBarLoggedIn from '../components/NavBar/indexLoggedIn'
+// import NavBarLoggedIn from '../components/NavBar/indexLoggedIn'
 import Services from '../components/Services'
 import Listings from '../components/Listings'
 import SideBar from '../components/SideBar'
@@ -40,9 +40,10 @@ const Home = () => {
     )}
     if (isAuthenticated) {
     return (
-         <>
+        <>
         <SideBar isOpen={isOpen} toggle={toggle}/>
-          <NavBarLoggedIn toggle={toggle}/>
+        <NavBar toggle={toggle} />
+          {/* <NavBarLoggedIn toggle={toggle}/> */}
           <Listings />
           <h1>Welcome {user.get("username")}</h1>
           <button 

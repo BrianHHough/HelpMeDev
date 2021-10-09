@@ -186,3 +186,12 @@ This may change the yarn.lock file package to this, but that's ok:
 Confirm that there are no instances of `ssh://` in the yarn.lock file.
 
 - confirm that `yarn build` will build the project with no errors (this will take a while)
+
+# Redirect logic using Moralis
+
+You can't redirect via Moralis. But you can build redirect logic using Moralis.
+Moralis.authenticate().then((user) => {
+//redirect
+}). catch((e) {
+alert(e)
+});

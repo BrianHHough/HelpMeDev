@@ -214,3 +214,13 @@ if (isAuthenticated) {
       />
 
 ```
+
+## Moralis Sign Up
+
+Need to pass in email, password, email in the onClick function of the button
+
+Solution from forum here: https://forum.moralis.io/t/solved-cannot-sign-up-user-with-an-empty-username/2247
+
+```js
+<Button onClick={() => signup(email, password, email)}>Sign up</Button>
+```

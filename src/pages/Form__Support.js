@@ -15,7 +15,7 @@ const TypeFormPage = () => {
     };
 
     return (
-        <>
+        <div id="support">
             <SideBar isOpen={isOpen} toggle={toggle}/>
             <NavBar toggle={toggle} />
 
@@ -25,7 +25,7 @@ const TypeFormPage = () => {
                 height: '100vh'
                 }} className="TypeFormProps" />
             
-        </>
+        </div>
     )
 }
 

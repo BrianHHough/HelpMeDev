@@ -99,3 +99,34 @@ export const NavBtnLinkSignOut = styled.div`
     }
 
 `;
+
+export const HeroH1 = styled.h1`
+     margin-top: 40px;
+    color: #fff;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 3px;
+
+    @media screen and (max-width: 768px) {
+        font-size: 40px;
+    }
+
+    @media screen and (max-width: 480px) {
+        font-size: 32px;
+    }
+`
+
+export const HeroH1Gradient = styled.h1`
+   
+    color: #fff;
+    font-size: 28px;
+    text-align: center;
+
+    @media screen and (max-width: 768px) {
+        font-size: 40px;
+    }
+
+    @media screen and (max-width: 480px) {
+        font-size: 32px;
+    }
+`

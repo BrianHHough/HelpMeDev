@@ -136,10 +136,16 @@ export const NavLinksLoggedIn = styled(LinkRouter)`
     height: 100%;
     cursor: pointer;
 
-    &.active {
+    &.activeClassName {
         border-bottom: 3px solid #00F260;
         font-weight: 600;
     }
+
+    .current {
+    li {
+      border-bottom: 2px solid black;
+    }
+  }
 `;
 
 export const NavBtnLinkSignIn = styled.div`

@@ -30,9 +30,9 @@ const Home = () => {
 
     // const { authenticate, isAuthenticated, user } = useMoralis();
     // const { authenticate } = useMoralis();
-    const { isAuthenticated, user } = useMoralis();
-    //     const { auth, authError, logout, isAuthenticating } = useMoralis();
-    const { authError, logout, isAuthenticating } = useMoralis();
+    const { isAuthenticated } = useMoralis();
+    // const { auth, authError, logout, isAuthenticating } = useMoralis();
+    const { authError } = useMoralis();
 
     if (!isAuthenticated) {
     return (
@@ -70,12 +70,12 @@ const Home = () => {
         <NavBar toggle={toggle} />
           {/* <NavBarLoggedIn toggle={toggle}/> */}
           <Listings />
-          <h1>Welcome {user.get("username")}</h1>
-          <button 
+          {/* <h1>Welcome {user.get("username")}</h1> */}
+          {/* <button 
             type='submit'
             onClick={() => logout()}
             disabled={isAuthenticating}
-            >Sign Out</button>
+            >Sign Out</button> */}
         <Footer />
         </>
         )   

@@ -33,8 +33,8 @@ const Services = () => {
 const classes = useStyles();
 
     return (
-        <>
-        <ListingsSearchContainer>
+        <div id="listings">
+        <ListingsSearchContainer >
 
         <div className="SearchBar">
                 <Paper component="form" className={classes.SearchBar}>
@@ -83,7 +83,7 @@ const classes = useStyles();
             </ServicesWrapper>
 
         </ServicesContainer>
-        </>    
+        </div>    
     )
 }
 

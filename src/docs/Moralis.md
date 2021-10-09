@@ -195,3 +195,22 @@ Moralis.authenticate().then((user) => {
 }). catch((e) {
 alert(e)
 });
+
+**My solution:** use the isAuthenticated hook and use Redirect from react-router-dom
+
+Something like this: https://reactrouter.com/web/example/auth-workflow and this stack overflow answer: https://stackoverflow.com/questions/47476186/when-user-is-not-logged-in-redirect-to-login-reactjs
+
+See code here:
+
+```js
+if (isAuthenticated) {
+
+    return (
+        <Redirect
+        to={{
+          pathname: "/",
+          state: { from: location }
+        }}
+      />
+
+```

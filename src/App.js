@@ -8,7 +8,7 @@ import Form__Support from './pages/Form__Support';
 import ProfilePage from './pages/profile';
 
 
-function App() {
+const App = () => {
   return (
     <React.Fragment>
     <Router>

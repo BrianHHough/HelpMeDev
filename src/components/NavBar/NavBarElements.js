@@ -126,7 +126,74 @@ export const NavBtn = styled.nav`
     }
 `;
 
+
+export const NavLinksLoggedIn = styled(LinkRouter)`
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+    cursor: pointer;
+
+    &.active {
+        border-bottom: 3px solid #00F260;
+        font-weight: 600;
+    }
+`;
+
 export const NavBtnLinkSignIn = styled.div`
+    border-radius: 50px;
+    background: linear-gradient(90deg, #00F260, #43A1FF);
+    white-space: nowrap;
+    padding: 10px 22px;
+    color: #002E5C;
+    font-size: 16px;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    animation: pulse 1.8s infinite;
+
+    &:hover {
+        transition: all 0.2s ease-in-out;
+        background: linear-gradient(90deg, #00F260, #43A1FF);
+        color: #010606;
+        box-shadow: 0 0px 25px rgba(255, 255, 255, .7);
+        animation: none;
+    }
+
+    @-webkit-keyframes pulse {
+        0% {
+            -webkit-box-shadow: 0 0 0 0 rgba(255,255,255, 0.6);
+        }
+        70% {
+            -webkit-box-shadow: 0 0 0 15px rgba(255,255,255, 0);
+        }
+        100% {
+            -webkit-box-shadow: 0 0 0 0 rgba(255,255,255, 0);
+        }
+    }
+    @keyframes pulse {
+        0% {
+            -moz-box-shadow: 0 0 0 0 rgba(255,255,255, 0.6);
+            box-shadow: 0 0 0 0 rgba(255,255,255, 0.4);
+        }
+        70% {
+            -moz-box-shadow: 0 0 0 15px rgba(255,255,255, 0);
+            box-shadow: 0 0 0 15px rgba(255,255,255, 0);
+        }
+        100% {
+            -moz-box-shadow: 0 0 0 0 rgba(255,255,255, 0);
+            box-shadow: 0 0 0 0 rgba(255,255,255, 0);
+        }
+    }
+
+`;
+
+export const NavBtnLinkToProfile = styled(LinkRouter)`
     border-radius: 50px;
     background: linear-gradient(90deg, #00F260, #43A1FF);
     white-space: nowrap;

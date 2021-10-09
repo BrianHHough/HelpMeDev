@@ -10,8 +10,11 @@ import Services from '../components/Services'
 import Listings from '../components/Listings'
 import SideBar from '../components/SideBar'
 
+import { useButton } from '@mui/core/ButtonUnstyled';
+
 // import { useHistory } from "react-router-dom"
 import { useMoralis } from "react-moralis";
+
 
 const Home = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -51,7 +54,7 @@ const Home = () => {
             onClick={() => logout()}
             disabled={isAuthenticating}
             >Sign Out</button>
-            <Footer />
+        <Footer />
         </>
         )   
     }

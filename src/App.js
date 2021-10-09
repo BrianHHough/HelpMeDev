@@ -3,7 +3,9 @@ import './App.css';
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom'
 import Home from './pages';
 import SignInPage from './pages/signin';
-import TypeFormPage from './pages/typeform';
+import Form__JoinWaitlist from './pages/Form__JoinWaitlist';
+import Form__Support from './pages/Form__Support';
+import ProfilePage from './pages/profile';
 
 
 function App() {
@@ -13,7 +15,10 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/signin" component={SignInPage} />
-        <Route path="/signupform" component={TypeFormPage} />
+        <Route path="/signupform" component={Form__JoinWaitlist} />
+        <Route path="/help" component={ProfilePage} />
+        <Route path="/profile" component={ProfilePage} />
+        <Route path="/support" component={Form__Support} />
       </Switch>
     </Router>
      

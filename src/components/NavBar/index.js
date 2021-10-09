@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { Nav, NavBarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, NavBtn, NavBtnLinkSignIn, NavBtnLinkSignOut } from './NavBarElements';
+import { Nav, NavBarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, NavLinksLoggedIn, NavBtn, NavBtnLinkSignIn, NavBtnLinkToProfile } from './NavBarElements';
 import '../../App.css';
 import {animateScroll as scroll } from 'react-scroll'
 import MenuIcon from '@mui/icons-material/Menu';
@@ -22,7 +22,7 @@ const NavBar = ({ toggle }) => {
     // const { authenticate, isAuthenticated, user } = useMoralis();
     // const { isAuthenticated, user } = useMoralis();
     const { authenticate, isAuthenticated } = useMoralis();
-    const { logout, isAuthenticating } = useMoralis();
+    const { isAuthenticating } = useMoralis();
     // const { logout, isAuthenticating } = useMoralis();
 
     const changeNav = () => {
@@ -156,7 +156,7 @@ const NavBar = ({ toggle }) => {
                                     exact='true' 
                                     offset={-80}
                                     >   
-                                    About</NavLinks>
+                                    Listings</NavLinks>
                             </NavItem>
                             <NavItem>
                                 <NavLinks 
@@ -166,7 +166,7 @@ const NavBar = ({ toggle }) => {
                                 spy={true} 
                                 exact='true' 
                                 offset={-80}
-                                >Listings</NavLinks>
+                                >Request Help</NavLinks>
                             </NavItem>
                             <NavItem>
                                 <NavLinks 
@@ -179,26 +179,37 @@ const NavBar = ({ toggle }) => {
                                 >Member Perks</NavLinks>
                             </NavItem>
                             <NavItem>
-                                <NavLinks 
-                                to="start"
+                                <NavLinksLoggedIn 
+                                to="/signupform"
                                 smooth={true} 
                                 duration={500} 
                                 spy={true} 
                                 exact='true' 
                                 offset={-80}
-                                >Get Started</NavLinks>
+                                >Join VIP</NavLinksLoggedIn>
+                            </NavItem>
+                            <NavItem>
+                                <NavLinksLoggedIn 
+                                to="/support"
+                                smooth={true} 
+                                duration={500} 
+                                spy={true} 
+                                exact='true' 
+                                offset={-80}
+                                >Support</NavLinksLoggedIn>
                             </NavItem>
                         </NavMenu>
 
                         <NavBtn>
-                            <NavBtnLinkSignOut 
-                            
-                            type='submit'
-                            onClick={() => logout()}
-                            disabled={isAuthenticating}
+                            <NavBtnLinkToProfile 
+                            to="/profile"
+                            smooth={true} 
+                            duration={500} 
+                            spy={true} 
+                            exact='true' 
                             >
-                            Sign Out
-                            </NavBtnLinkSignOut>
+                            My Profile
+                            </NavBtnLinkToProfile>
                         </NavBtn> 
 
                     </NavBarContainer>

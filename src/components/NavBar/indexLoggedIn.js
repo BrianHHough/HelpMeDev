@@ -16,11 +16,11 @@ const useStyles = makeStyles((theme) => ({
    
   }));
 
-const NavBar = ({ toggle }) => {
+const NavBarLoggedIn = ({ toggle }) => { 
     const classes = useStyles();
     const [scrollNav, setScrollNav] = useState(false);
 
-    // const { authenticate, isAuthenticated, user } = useMoralis();
+    const { isAuthenticated } = useMoralis();
     const { logout, isAuthenticating } = useMoralis();
 
     const changeNav = () => {
@@ -38,7 +38,15 @@ const NavBar = ({ toggle }) => {
     const toggleHome = () => {
         scroll.scrollToTop();
     }
-    
+    if (!isAuthenticated) {
+        return (
+            <div>
+                Not logged in
+            </div>
+        )
+    }
+
+    if (isAuthenticated) {
     return (
         <div>
             <>
@@ -118,8 +126,9 @@ const NavBar = ({ toggle }) => {
                 </Nav>
             </>
         </div>
-    )
+        )
+    }
 
 }
 
-export default NavBar
+export default NavBarLoggedIn

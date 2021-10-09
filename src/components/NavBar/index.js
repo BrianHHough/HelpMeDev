@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { Nav, NavBarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, NavBtn, NavBtnLink } from './NavBarElements';
+import { Nav, NavBarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, NavBtn, NavBtnLinkSignIn, NavBtnLinkSignOut } from './NavBarElements';
 import '../../App.css';
 import {animateScroll as scroll } from 'react-scroll'
 import MenuIcon from '@mui/icons-material/Menu';
@@ -21,7 +21,8 @@ const NavBar = ({ toggle }) => {
     const [scrollNav, setScrollNav] = useState(false);
     // const { authenticate, isAuthenticated, user } = useMoralis();
     // const { isAuthenticated, user } = useMoralis();
-    const { isAuthenticated } = useMoralis();
+    const { authenticate, isAuthenticated } = useMoralis();
+    const { logout, isAuthenticating } = useMoralis();
     // const { logout, isAuthenticating } = useMoralis();
 
     const changeNav = () => {
@@ -106,9 +107,15 @@ const NavBar = ({ toggle }) => {
                         </NavMenu>
 
                         <NavBtn>
-                            <NavBtnLink to="/signin">
+                            {/* <NavBtnLink to="/signin">
                             Log In
-                            </NavBtnLink>
+                            </NavBtnLink> */}
+                            <NavBtnLinkSignIn 
+                            onClick={() => authenticate()}
+                            isLoading={isAuthenticating}
+                            >
+                            Log In
+                            </NavBtnLinkSignIn>
                         </NavBtn> 
 
                     </NavBarContainer>
@@ -117,6 +124,88 @@ const NavBar = ({ toggle }) => {
             </>
         </div>
     )
+    };
+    if (isAuthenticated) {
+        return (
+            <>
+                <Nav scrollNav={scrollNav}>
+                    <NavBarContainer>
+
+                        <NavLogo 
+                            to='/' 
+                            onClick={toggleHome}
+                            className="NavLogoGradient"
+                            >
+                            <h2>HelpMeDev</h2>
+                        </NavLogo>
+
+                        <MobileIcon 
+                            onClick={toggle}
+                            className={classes.largeIcon}
+                            >
+                            <MenuIcon />
+                        </MobileIcon>
+
+                        <NavMenu>
+                            <NavItem>
+                                <NavLinks 
+                                    to="about"
+                                    smooth={true} 
+                                    duration={500} 
+                                    spy={true} 
+                                    exact='true' 
+                                    offset={-80}
+                                    >   
+                                    About</NavLinks>
+                            </NavItem>
+                            <NavItem>
+                                <NavLinks 
+                                to="listings"
+                                smooth={true} 
+                                duration={500} 
+                                spy={true} 
+                                exact='true' 
+                                offset={-80}
+                                >Listings</NavLinks>
+                            </NavItem>
+                            <NavItem>
+                                <NavLinks 
+                                to="perks"
+                                smooth={true} 
+                                duration={500} 
+                                spy={true} 
+                                exact='true' 
+                                offset={-80}
+                                >Member Perks</NavLinks>
+                            </NavItem>
+                            <NavItem>
+                                <NavLinks 
+                                to="start"
+                                smooth={true} 
+                                duration={500} 
+                                spy={true} 
+                                exact='true' 
+                                offset={-80}
+                                >Get Started</NavLinks>
+                            </NavItem>
+                        </NavMenu>
+
+                        <NavBtn>
+                            <NavBtnLinkSignOut 
+                            
+                            type='submit'
+                            onClick={() => logout()}
+                            disabled={isAuthenticating}
+                            >
+                            Sign Out
+                            </NavBtnLinkSignOut>
+                        </NavBtn> 
+
+                    </NavBarContainer>
+
+                </Nav>
+            </>
+        )
     }
 }
 

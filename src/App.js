@@ -7,6 +7,7 @@ import SignUpPage from './pages/signup';
 import Form__JoinWaitlist from './pages/Form__JoinWaitlist';
 import Form__Support from './pages/Form__Support';
 import ProfilePage from './pages/profile';
+import RequestHelpPage from './pages/help';
 
 
 const App = () => {
@@ -18,7 +19,7 @@ const App = () => {
         <Route path="/signin" component={SignInPage} />
         <Route path="/signup" component={SignUpPage} />
         <Route path="/signupform" component={Form__JoinWaitlist} />
-        <Route path="/help" component={ProfilePage} />
+        <Route path="/help" component={RequestHelpPage} />
         <Route path="/profile" component={ProfilePage} />
         <Route path="/support" component={Form__Support} />
       </Switch>

@@ -10,7 +10,7 @@ import { useMoralis } from "react-moralis";
 const SignIn = () => {
     // const { authenticate, isAuthenticated, user } = useMoralis();
     // const { logout, isAuthenticating } = useMoralis();
-    const { authenticate, isAuthenticated, user, authError } = useMoralis();
+    const { authenticate, isAuthenticated, authError } = useMoralis();
     const { isAuthenticating } = useMoralis();
     // const history = useHistory();
 

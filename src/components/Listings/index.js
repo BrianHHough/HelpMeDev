@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-import Icon1 from '../../assets/images/svg-1.svg';
-import Icon2 from '../../assets/images/svg-2.svg';
-import Icon3 from '../../assets/images/svg-3.svg';
+// import Icon1 from '../../assets/images/svg-1.svg';
+// import Icon2 from '../../assets/images/svg-2.svg';
+// import Icon3 from '../../assets/images/svg-3.svg';
 import { ListingsSearchContainer, ServicesContainer, ServicesWrapper, ServicesCard, ServicesIcon, ServicesH2, ServicesP, CostP, AddressP, ServicesContainerTop, HelpThisDevBtn, ProgrammingLanguageIcon, ProgrammingLanguageIconCon } from './ListingsElements'
 
 import Paper from '@material-ui/core/Paper';
@@ -11,17 +11,17 @@ import { makeStyles } from '@material-ui/core/styles';
 import InputBase from '@material-ui/core/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
 import EthereumSVG from "../../assets/images/ethereum.svg";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import Avatar from '@mui/material/Avatar';
 import Badge from '@mui/material/Badge';
 import { styled } from '@mui/material/styles';
 
-import PL__CPlusPlus from "../../assets/programming_logos/C++_Logo.png";
+// import PL__CPlusPlus from "../../assets/programming_logos/C++_Logo.png";
 import PL__React from "../../assets/programming_logos/React-logo.png";
 import PL__JavaScript from "../../assets/programming_logos/JavaScript-logo.png";
-import PL__Solidity from "../../assets/programming_logos/Solidity_logo.png";
-import PL__Java from "../../assets/programming_logos/Java-logo.png";
+import PL__Solidity from "../../assets/programming_logos/Solidity_logo.jpeg";
+import PL__Python from "../../assets/programming_logos/Python-logo.png";
+// import PL__Java from "../../assets/programming_logos/Java-logo.png";
 
 import { useMoralis } from "react-moralis";
 
@@ -77,9 +77,9 @@ const useStyles = makeStyles((theme) => ({
 const Services = () => {
     const classes = useStyles();
 
-    const { isAuthenticated, user, setUserData, userError, isUserUpdating } = useMoralis();
-    const [username, setUsername] = useState(user.attributes.username);
-    const [ethaddress, setEthaddress] = useState(user.attributes.username);
+    const {user } = useMoralis();
+    const [username] = useState(user.attributes.username);
+    // const [ethaddress, setEthaddress] = useState(user.attributes.username);
 
     return (
         <div id="listings">
@@ -141,7 +141,7 @@ const Services = () => {
                         </b> 
 
                         <b style={{
-                                fontSize: "1.5rem",
+                                fontSize: "1.rem",
                                 marginLeft: "5px",
                                 fontWeight: 200,
                             }}>{user.attributes.ethAddress.substring(0, 4) + "..." + user.attributes.ethAddress.substring(user.attributes.ethAddress.length-4)}</b>
@@ -192,8 +192,17 @@ const Services = () => {
 
                 </ServicesCard>
 
+
+
+
+
+
+
+
+
+
                 <ServicesCard>
-                <ServicesIcon>
+                    <ServicesIcon>
                         <StyledBadge
                             overlap="circular"
                             anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
@@ -218,64 +227,167 @@ const Services = () => {
                     </ServicesIcon>
                     <ServicesH2>Blockchain smart contracts for dapp</ServicesH2>
                     <ServicesP>Obsessed with the crypto market, but not a coder. Let's make the next Binance!</ServicesP>
-                </ServicesCard>
+                    <AddressP>
+                        <b style={{
+                                fontSize: "1.4rem",
+                                
+                            }}>Submitted By:
+                        </b> 
 
-                <ServicesCard>
-                <ServicesIcon>
-                        <StyledBadge
-                            overlap="circular"
-                            anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
-                            variant="dot"
-                        >
-                        <Avatar
-                            sx={{ 
-                                bgcolor: "#43A1FF",
-                                width: "60px",
-                                height: "60px",
-                                marginTop: "30px",
-                                fontSize: "2.25rem",
-                            
-                            }}
-                            alt="HelpMeDev"
-                            src="/broken-image.jpg"
-                            name={user.attributes.username}
-                            >
-                                {username.charAt(0)}
-                        </Avatar>
-                        </StyledBadge>
-                    </ServicesIcon>
-                    <ServicesH2>Full Stack App (Idea Stage)</ServicesH2>
-                    <ServicesP>Looking for my Wozniak! Really great idea for uber of startups. Let's scale!</ServicesP>
-                </ServicesCard>
-
-                <ServicesCard>
-                <ServicesIcon>
-                        <StyledBadge
-                            overlap="circular"
-                            anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
-                            variant="dot"
-                        >
-                        <Avatar
-                            sx={{ 
-                                bgcolor: "#43A1FF",
-                                width: "60px",
-                                height: "60px",
-                                marginTop: "30px",
-                                fontSize: "2.25rem",
-                            
-                            }}
-                            alt="HelpMeDev"
-                            src="/broken-image.jpg"
-                            name={user.attributes.username}
-                            >
-                                {username.charAt(0)}
-                        </Avatar>
-                        </StyledBadge>
+                        <b style={{
+                                fontSize: "1.5rem",
+                                marginLeft: "5px",
+                                fontWeight: 200,
+                            }}>{user.attributes.ethAddress.substring(0, 4) + "..." + user.attributes.ethAddress.substring(user.attributes.ethAddress.length-4)}</b>
                         
-                    </ServicesIcon>
-                    <ServicesH2>Java Healthcare SaaS Platform</ServicesH2>
-                    <ServicesP>Healthcare application working with hospitals to help keep people safe.</ServicesP>
+                    </AddressP>
+                    <CostP>
+                        <b style={{
+                                fontSize: "1.4rem",
+                                
+                            }}>Price:</b> 
+                            <img 
+                            src={EthereumSVG} alt="Ethereum"
+                            style={{
+                                height: "25px",
+                                marginLeft: "10px"
+                            }}
+                            />
+                        <b style={{
+                                fontSize: "2rem",
+                                marginLeft: "5px",
+                                fontWeight: 200,
+                            }}>2.7</b>
+                    </CostP>
+
+                    
+                    <CostP>
+                        <b style={{
+                                fontSize: "1.4rem",
+                                
+                            }}>Needs:
+                        </b> 
+                        <ProgrammingLanguageIconCon>
+                            <ProgrammingLanguageIcon src={PL__Solidity} alt="Solidity" />
+                        </ProgrammingLanguageIconCon>
+                    </CostP>
+
+                    
+                    <HelpThisDevBtn 
+                        to="#"
+                        smooth={true} 
+                        duration={500} 
+                        spy={true} 
+                        exact='true' 
+                        >
+                        Help This Dev
+                    </HelpThisDevBtn>
+
                 </ServicesCard>
+
+
+
+
+
+
+
+
+                <ServicesCard>
+                    <ServicesIcon>
+                        <StyledBadge
+                            overlap="circular"
+                            anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+                            variant="dot"
+                        >
+                        <Avatar
+                            sx={{ 
+                                bgcolor: "#43A1FF",
+                                width: "60px",
+                                height: "60px",
+                                marginTop: "30px",
+                                fontSize: "2.25rem",
+                            
+                            }}
+                            alt="HelpMeDev"
+                            src="/broken-image.jpg"
+                            name={user.attributes.username}
+                            >
+                                {username.charAt(0)}
+                        </Avatar>
+                        </StyledBadge>
+                    </ServicesIcon>
+                    <ServicesH2>Full Stack Serverless App (Idea Stage)</ServicesH2>
+                    <ServicesP>Looking for my Wozniak! Really great idea for uber of healthcare. Let's scale!</ServicesP>
+                    <AddressP>
+                        <b style={{
+                                fontSize: "1.4rem",
+                                
+                            }}>Submitted By:
+                        </b> 
+
+                        <b style={{
+                                fontSize: "1.5rem",
+                                marginLeft: "5px",
+                                fontWeight: 200,
+                            }}>{user.attributes.ethAddress.substring(0, 4) + "..." + user.attributes.ethAddress.substring(user.attributes.ethAddress.length-4)}</b>
+                        
+                    </AddressP>
+                    <CostP>
+                        <b style={{
+                                fontSize: "1.4rem",
+                                
+                            }}>Price:</b> 
+                            <img 
+                            src={EthereumSVG} alt="Ethereum"
+                            style={{
+                                height: "25px",
+                                marginLeft: "10px"
+                            }}
+                            />
+                        <b style={{
+                                fontSize: "2rem",
+                                marginLeft: "5px",
+                                fontWeight: 200,
+                            }}>3.2</b>
+                    </CostP>
+
+                    
+                    <CostP>
+                        <b style={{
+                                fontSize: "1.4rem",
+                                
+                            }}>Needs:
+                        </b> 
+                        <ProgrammingLanguageIconCon>
+                            <ProgrammingLanguageIcon src={PL__Python} alt="Python" />  
+                        </ProgrammingLanguageIconCon>
+                    </CostP>
+
+                    
+                    <HelpThisDevBtn 
+                        to="#"
+                        smooth={true} 
+                        duration={500} 
+                        spy={true} 
+                        exact='true' 
+                        >
+                        Help This Dev
+                    </HelpThisDevBtn>
+
+                </ServicesCard>
+
+
+
+
+                
+
+                
+
+                
+
+                
+
+                
 
             </ServicesWrapper>
 

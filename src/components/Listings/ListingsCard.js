@@ -1,23 +1,23 @@
 import React, { useState } from 'react';
 
-import Icon1 from '../../assets/images/svg-1.svg';
-import Icon2 from '../../assets/images/svg-2.svg';
-import Icon3 from '../../assets/images/svg-3.svg';
-import { ListingsSearchContainer, ServicesContainer, ServicesWrapper, ListingsCardStyles, ServicesIcon, ServicesH2, ServicesP, CostP, AddressP, ServicesContainerTop, HelpThisDevBtn, ProgrammingLanguageIcon, ProgrammingLanguageIconCon } from './ListingsElements'
+// import Icon1 from '../../assets/images/svg-1.svg';
+// import Icon2 from '../../assets/images/svg-2.svg';
+// import Icon3 from '../../assets/images/svg-3.svg';
+import { ServicesIcon, ServicesH2, ServicesP, CostP, AddressP,  HelpThisDevBtn, ProgrammingLanguageIcon, ProgrammingLanguageIconCon } from './ListingsElements'
 
-import Paper from '@material-ui/core/Paper';
-import IconButton from '@material-ui/core/IconButton';
+// import Paper from '@material-ui/core/Paper';
+// import IconButton from '@material-ui/core/IconButton';
 import { makeStyles } from '@material-ui/core/styles';
-import InputBase from '@material-ui/core/InputBase';
-import SearchIcon from '@mui/icons-material/Search';
+// import InputBase from '@material-ui/core/InputBase';
+// import SearchIcon from '@mui/icons-material/Search';
 import EthereumSVG from "../../assets/images/ethereum.svg";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import PL__CPlusPlus from "../../assets/programming_logos/C++_Logo.png";
+// import PL__CPlusPlus from "../../assets/programming_logos/C++_Logo.png";
 import PL__React from "../../assets/programming_logos/React-logo.png";
 import PL__JavaScript from "../../assets/programming_logos/JavaScript-logo.png";
-import PL__Solidity from "../../assets/programming_logos/Solidity_logo.png";
-import PL__Java from "../../assets/programming_logos/Java-logo.png";
+// import PL__Solidity from "../../assets/programming_logos/Solidity_logo.png";
+// import PL__Java from "../../assets/programming_logos/Java-logo.png";
 
 import Avatar from '@mui/material/Avatar';
 import Badge from '@mui/material/Badge';
@@ -55,30 +55,30 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
     },
   }));
 
-  const useStyles = makeStyles((theme) => ({
-    SearchBar: {
-      padding: '2px 4px',
-      display: 'flex',
-      alignItems: 'center',
-      width: 400,
-    },
-    input: {
-      marginLeft: theme.spacing(1),
-      flex: 1,
-    },
-    iconButton: {
-      padding: 10,
-    },
-  }));
+  // const useStyles = makeStyles((theme) => ({
+  //   SearchBar: {
+  //     padding: '2px 4px',
+  //     display: 'flex',
+  //     alignItems: 'center',
+  //     width: 400,
+  //   },
+  //   input: {
+  //     marginLeft: theme.spacing(1),
+  //     flex: 1,
+  //   },
+  //   iconButton: {
+  //     padding: 10,
+  //   },
+  // }));
 
 
+// title, description, ethAddress, price, needs
+const ListingsCard = () => {
+    // const classes = useStyles();
 
-const ListingsCard = ({title, description, ethAddress, price, needs}) => {
-    const classes = useStyles();
-
-    const { isAuthenticated, user, setUserData, userError, isUserUpdating } = useMoralis();
-    const [username, setUsername] = useState(user.attributes.username);
-    const [ethaddress, setEthaddress] = useState(user.attributes.username);
+    const { user } = useMoralis();
+    const [username] = useState(user.attributes.username);
+    // const [ethaddress, setEthaddress] = useState(user.attributes.username);
 
     return (
         <ListingsCard>
@@ -137,7 +137,7 @@ const ListingsCard = ({title, description, ethAddress, price, needs}) => {
                     fontSize: "2rem",
                     marginLeft: "5px",
                     fontWeight: 200,
-                }}>0.5</b>
+                }}>0.6</b>
         </CostP>
 
         

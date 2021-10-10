@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react';
 
-import {Container, FormWrap, Icon, FormContent, Form, FormH1, FormLabel, FormInput, FormButton, FormButtonMetaMask, Text, HeroH1Gradient} from './SignInElements'
-import { useHistory } from "react-router-dom"
+import {Container, FormWrap, Icon, FormContent, Form, FormH1, FormH1v2, FormLabel, FormInput, FormButton, FormButtonMetaMask, Text, HeroH1Gradient} from './SignInElements'
+// import { useHistory } from "react-router-dom"
+import { Redirect, useLocation } from "react-router-dom";
 import { useMoralis } from "react-moralis";
 
 const SignIn = () => {
@@ -9,15 +10,13 @@ const SignIn = () => {
     // const { logout, isAuthenticating } = useMoralis();
     const { authenticate, isAuthenticated } = useMoralis();
     const { isAuthenticating } = useMoralis();
-    const history = useHistory();
+    // const history = useHistory();
 
-    // const handleRouteHomePage = async() => {
-    //     if (!isAuthenticated) {
-    //         return (
-    //     history.push("/")
-    //     )
-    //     }
-    // }
+    const {login} = useMoralis();
+    // const history = useHistory();
+    const {location} = useLocation();
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
 
     if (!isAuthenticated) {
     return (
@@ -27,21 +26,36 @@ const SignIn = () => {
                 <FormContent>
                     <Form action="#">
                     <HeroH1Gradient className="H1Gradient">HelpMeDev</HeroH1Gradient>
-                        <FormH1>Sign into your account</FormH1>
+                        <FormH1>Sign in via web3</FormH1>
                         
                         <FormButtonMetaMask 
                         
                         onClick={() => authenticate()}
                         isLoading={isAuthenticating}
-                        >Login with MetaMask
+                        >Sign In with MetaMask
                         </FormButtonMetaMask>
 
-                        <br></br>
+                        <FormH1v2>Or use your favorite email:</FormH1v2>
                         <FormLabel htmlFor='for'>Email</FormLabel>
-                            <FormInput type='email' required />
+                            <FormInput 
+                            type='email' 
+                            placeholder="Write your email address"
+                            value={email}
+                            onChange={(event) => setEmail(event.currentTarget.value)}
+                            />
+                        
                         <FormLabel htmlFor='for'>Password</FormLabel>
-                            <FormInput type='password' required />
-                       <FormButton type='submit'>Continue</FormButton>
+                            <FormInput 
+                            type='password' 
+                            placeholder="Choose a secure password"
+                            value={password}
+                            onChange={(event) => setPassword(event.currentTarget.value)} 
+                             />
+                       <FormButton 
+                       type='submit'
+                       onClick={() => login(email, password)}
+                       >
+                           Sign In</FormButton>
                        <Text>Forgot password</Text>
                     </Form>
                 </FormContent>
@@ -51,21 +65,12 @@ const SignIn = () => {
     }
     if (isAuthenticated) {
     return (
-        history.push("/")
-        // <div>
-        //   <br></br>
-        //   <br></br>
-        //   <br></br>
-        //   <br></br>
-        //   <br></br>
-        //   <br></br>
-        //   <h1>Welcome {user.get("username")}</h1>
-        //   <FormButtonMetaMask 
-        //     type='submit'
-        //     onClick={() => logout()}
-        //     disabled={isAuthenticating}
-        //     >Sign Out</FormButtonMetaMask>
-        // </div>
+        <Redirect
+        to={{
+          pathname: "/",
+          state: { from: location }
+        }}
+        />
       );
     }
 

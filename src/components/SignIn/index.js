@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import { ErrorBox } from '../Error';
+
 import {Container, FormWrap, Icon, FormContent, Form, FormH1, FormH1v2, FormLabel, FormInput, FormButton, FormButtonMetaMask, Text, HeroH1Gradient} from './SignInElements'
 // import { useHistory } from "react-router-dom"
 import { Redirect, useLocation } from "react-router-dom";
@@ -8,7 +10,7 @@ import { useMoralis } from "react-moralis";
 const SignIn = () => {
     // const { authenticate, isAuthenticated, user } = useMoralis();
     // const { logout, isAuthenticating } = useMoralis();
-    const { authenticate, isAuthenticated } = useMoralis();
+    const { authenticate, isAuthenticated, user, authError } = useMoralis();
     const { isAuthenticating } = useMoralis();
     // const history = useHistory();
 
@@ -20,6 +22,7 @@ const SignIn = () => {
 
     if (!isAuthenticated) {
     return (
+        <>
         <Container>
             <FormWrap>
                 <Icon to="/">HelpMeDev</Icon>
@@ -56,11 +59,16 @@ const SignIn = () => {
                        onClick={() => login(email, password)}
                        >
                            Sign In</FormButton>
+                    <div style={{marginTop: 15}}>
+                        {authError && <ErrorBox title="Issue Signing You In" 
+                        message={authError.message} />}
+                    </div>
                        <Text>Forgot password</Text>
                     </Form>
                 </FormContent>
             </FormWrap>
         </Container>
+        </>
     )
     }
     if (isAuthenticated) {

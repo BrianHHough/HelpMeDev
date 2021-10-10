@@ -1,5 +1,5 @@
 [
-    { "id": "1", "listing": "Front-end of Shopify marketplace", "language": "react" },
+    { "id": "1", "listing": "Front-end dev for a Shopify marketplace", "language": "react" },
     { "id": "2", "listing": "Blockchain smart contracts for dapp", "tag": "solidity" },
     { "id": "3", "listing": "Full Stack App (Idea Stage)", "tag": "react" },
     { "id": "4", "listing": "Java Legacy System SaaS Product", "tag": "java" },

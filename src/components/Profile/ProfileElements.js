@@ -5,11 +5,12 @@ import styled from 'styled-components'
 export const ProfileContainer = styled.div`
 background: #0c0c0c;
 display: flex;
+position: relative;
 justify-content: center;
-/* margin-top: 80px; */
+margin-top: 80px;
 align-items: center;
 padding: 0 30px;
-height: calc(100vh);
+height: 850px;
 position: relative;
 z-index: 1;
 `
@@ -31,7 +32,7 @@ top: 0;
 right: 0;
 bottom: 0;
 left: 0;
-margin-top: 80px;
+/* margin-top: 80px; */
 width: 100%;
 height: 100%;
 overflow: hidden;
@@ -106,31 +107,31 @@ export const NavBtnLinkSignOut = styled.div`
 export const HeroH1 = styled.h1`
      margin-top: 40px;
     color: #fff;
-    font-size: 28px;
+    font-size: 40px;
     text-align: center;
     margin-bottom: 3px;
 
     @media screen and (max-width: 768px) {
-        font-size: 40px;
+        font-size: 35px;
     }
 
     @media screen and (max-width: 480px) {
-        font-size: 32px;
+        font-size: 30px;
     }
 `
 
 export const HeroH1Gradient = styled.h1`
    
     color: #fff;
-    font-size: 28px;
+    font-size: 40px;
     text-align: center;
 
     @media screen and (max-width: 768px) {
-        font-size: 40px;
+        font-size: 35px;
     }
 
     @media screen and (max-width: 480px) {
-        font-size: 32px;
+        font-size: 30px;
     }
 `
 

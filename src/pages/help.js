@@ -1,12 +1,12 @@
 import React, {useState} from 'react';
 import NavBar from '../components/NavBar';
 import SideBar from '../components/SideBar';
-import ProfileSection from '../components/Profile'
+import HelpSection from '../components/RequestHelp'
 import Footer from '../components/Footer'
 
 import './typeform.css';
 
-const ProfilePage = () => {
+const RequestHelpPage = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggle = () => {
@@ -18,13 +18,13 @@ const ProfilePage = () => {
         <>
             <SideBar isOpen={isOpen} toggle={toggle}/>
             <NavBar toggle={toggle} />
-            <ProfileSection />
+            <HelpSection />
             <Footer />
         </>
     )
 }
 
-export default ProfilePage
+export default RequestHelpPage
 
 
 

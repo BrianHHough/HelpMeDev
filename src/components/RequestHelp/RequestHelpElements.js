@@ -10,7 +10,7 @@ justify-content: center;
 margin-top: 80px;
 align-items: center;
 padding: 0 30px;
-height: 850px;
+height: 1450px;
 position: relative;
 z-index: 1;
 `
@@ -212,10 +212,12 @@ export const FormInput = styled.input`
     padding: 16px 16px;
     margin-bottom: 32px;
     margin-left: 10px;
+    margin-top: 10px;
     border-color: 2px #fff;
     border-radius: 4px;
     color: white;
     background-color: #000C30;
+    width: 50%;
 `;
 
 export const FormButtonMetaMask = styled.button`

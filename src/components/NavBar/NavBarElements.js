@@ -78,7 +78,7 @@ export const MobileIcon = styled.div`
         justify-self: flex-start;
         align-items: center;
         margin-top: -70px;
-        margin-right: 0px;
+        margin-right: -40px;
         transform: translate(-100%, 60%);
         font-size: 2rem;
         cursor: pointer;

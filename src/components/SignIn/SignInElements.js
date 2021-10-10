@@ -2,9 +2,9 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
-    min-height: 692px;
-    height: 100%;
-    position: fixed;
+    /* min-height: 692px; */
+    height: 850px;
+    position: relative;
     bottom: 0;
     left: 0;
     right: 0;
@@ -16,13 +16,15 @@ export const Container = styled.div`
 `;
 
 export const FormWrap = styled.div`
-    height: 100%;
+    height: 850px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 
     @media screen and (max-width: 400px) {
-        height: 80%;
+        /* height: 80%; */
+        height: 850px;
+        margin-top: -40px;
     }
 `;
 

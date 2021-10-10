@@ -181,7 +181,6 @@ const NavBar = ({ toggle }) => {
                             <NavItem>
                                 <NavLinksLoggedIn 
                                 to="/signupform"
-                                activeClassName="active"
                                 smooth={true} 
                                 duration={500} 
                                 spy={true} 

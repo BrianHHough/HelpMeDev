@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
 import {Container, FormWrap, Icon, FormContent, Form, FormH1, FormH1v2, FormLabel, FormInput, FormButton, FormButtonMetaMask, Text, HeroH1Gradient} from './SignUpElements'
 // import { useHistory } from "react-router-dom"
-import { Redirect, useLocation } from "react-router-dom"
+import { Redirect, useLocation } from "react-router-dom";
 import { useMoralis } from "react-moralis";
 
 import Alert from '@mui/material/Alert';
@@ -93,21 +93,6 @@ const SignUp = () => {
           state: { from: location }
         }}
       />
-        // history.push("/")
-        // <div>
-        //   <br></br>
-        //   <br></br>
-        //   <br></br>
-        //   <br></br>
-        //   <br></br>
-        //   <br></br>
-        //   <h1>Welcome {user.get("username")}</h1>
-        //   <FormButtonMetaMask 
-        //     type='submit'
-        //     onClick={() => logout()}
-        //     disabled={isAuthenticating}
-        //     >Sign Out</FormButtonMetaMask>
-        // </div>
       );
     }
 

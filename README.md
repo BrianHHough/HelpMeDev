@@ -1,7 +1,11 @@
+![image](./src/brand/HelpMeDev__Logo1.png)
+
 # HelpMeDev
 2021 ETHGlobal Hackathon Project
 
 **Description:** Think of all the side projects you have worked on and maybe put it to the side or never finished because of a technical snag or a frustrating bug. What if you could put out contracts to an ecosystem of other developers to help you finish your project or feature for you. HelpMeDev is a gitcoin for personal projects (i.e. creating contracts so you can pay developers to help you finish your side project, startup, dream app, etc.)
+
+![image](./src/brand/HelpMeDev-banner.png)
 
 **Tech Stack:**
 - Front-End: React
